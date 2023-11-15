@@ -2,66 +2,86 @@
 <!-- Generated with glade 3.38.2 -->
 <interface>
   <requires lib="gtk+" version="3.24"/>
+  <object class="GtkImage" id="image-about">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">help-about</property>
+  </object>
+  <object class="GtkImage" id="image-close">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">dialog-close</property>
+  </object>
+  <object class="GtkImage" id="image-help">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">help-contents</property>
+  </object>
+  <object class="GtkImage" id="image-print">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">document-print</property>
+  </object>
+  <object class="GtkImage" id="image-properties">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">preferences-desktop</property>
+  </object>
+  <object class="GtkImage" id="image-redo">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">edit-redo</property>
+  </object>
+  <object class="GtkImage" id="image-select-all">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">edit-select-all</property>
+  </object>
+  <object class="GtkImage" id="image-undo">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">edit-undo</property>
+  </object>
   <object class="GtkImage" id="image1">
     <property name="visible">True</property>
     <property name="can-focus">False</property>
-    <property name="stock">gtk-help</property>
+    <property name="icon-name">edit-find</property>
   </object>
   <object class="GtkImage" id="image2">
     <property name="visible">True</property>
     <property name="can-focus">False</property>
-    <property name="stock">gtk-about</property>
+    <property name="icon-name">preferences-desktop-font</property>
   </object>
   <object class="GtkImage" id="image3">
     <property name="visible">True</property>
     <property name="can-focus">False</property>
-    <property name="stock">gtk-print</property>
+    <property name="icon-name">go-previous</property>
   </object>
   <object class="GtkImage" id="image4">
     <property name="visible">True</property>
     <property name="can-focus">False</property>
-    <property name="stock">gtk-close</property>
-  </object>
-  <object class="GtkImage" id="image5">
-    <property name="visible">True</property>
-    <property name="can-focus">False</property>
-    <property name="stock">gtk-undo</property>
-  </object>
-  <object class="GtkImage" id="image6">
-    <property name="visible">True</property>
-    <property name="can-focus">False</property>
-    <property name="stock">gtk-redo</property>
-  </object>
-  <object class="GtkImage" id="image7">
-    <property name="visible">True</property>
-    <property name="can-focus">False</property>
-    <property name="stock">gtk-select-all</property>
-  </object>
-  <object class="GtkImage" id="image8">
-    <property name="visible">True</property>
-    <property name="can-focus">False</property>
-    <property name="stock">gtk-properties</property>
+    <property name="icon-name">go-next</property>
   </object>
   <object class="GtkApplicationWindow" id="mainWindow">
     <property name="can-focus">False</property>
-    <property name="title" translatable="yes">RustEd</property>
+    <property name="title" translatable="yes">RustEd, v. 0.01</property>
     <property name="window-position">center</property>
-    <property name="default-width">750</property>
-    <property name="default-height">500</property>
+    <property name="default-width">1024</property>
+    <property name="default-height">750</property>
     <property name="icon">rusted-icon-32x32.png</property>
     <property name="gravity">center</property>
     <signal name="destroy" handler="on_window_main_destroy" swapped="no"/>
     <child>
-      <object class="GtkBox">
+      <object class="GtkBox" id="box1">
         <property name="visible">True</property>
         <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <child>
-          <object class="GtkMenuBar">
+          <object class="GtkMenuBar" id="menuBar">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <child>
-              <object class="GtkMenuItem">
+              <object class="GtkMenuItem" id="menuFile">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="label" translatable="yes">_File</property>
@@ -71,45 +91,50 @@
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="menuItemNew">
                         <property name="label">gtk-new</property>
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">New Document</property>
                         <property name="use-underline">True</property>
                         <property name="use-stock">True</property>
                       </object>
                     </child>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="menuItemOpen">
                         <property name="label">gtk-open</property>
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Open Document</property>
                         <property name="use-underline">True</property>
                         <property name="use-stock">True</property>
                       </object>
                     </child>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="menuItemSave">
                         <property name="label">gtk-save</property>
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Save Document</property>
                         <property name="use-underline">True</property>
                         <property name="use-stock">True</property>
                       </object>
                     </child>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="menuItemSaveAs">
                         <property name="label">gtk-save-as</property>
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Save Document As</property>
                         <property name="use-underline">True</property>
                         <property name="use-stock">True</property>
                       </object>
                     </child>
                     <child>
-                      <object class="GtkMenuItem">
+                      <object class="GtkMenuItem" id="menuItemSaveAll">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Save All Documents</property>
                         <property name="label" translatable="yes">Save all</property>
                         <property name="use-underline">True</property>
                       </object>
@@ -121,11 +146,12 @@
                       </object>
                     </child>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="menuItemPrint">
                         <property name="label" translatable="yes">Print</property>
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="image">image3</property>
+                        <property name="tooltip-text" translatable="yes">Print Document</property>
+                        <property name="image">image-print</property>
                         <property name="use-stock">False</property>
                       </object>
                     </child>
@@ -136,19 +162,21 @@
                       </object>
                     </child>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="menuItemClose">
                         <property name="label" translatable="yes">Close</property>
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="image">image4</property>
+                        <property name="tooltip-text" translatable="yes">Close Document</property>
+                        <property name="image">image-close</property>
                         <property name="use-stock">False</property>
                       </object>
                     </child>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="menuItemQuit">
                         <property name="label">gtk-quit</property>
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Quit</property>
                         <property name="use-underline">True</property>
                         <property name="use-stock">True</property>
                       </object>
@@ -158,7 +186,7 @@
               </object>
             </child>
             <child>
-              <object class="GtkMenuItem">
+              <object class="GtkMenuItem" id="menuEdit">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="label" translatable="yes">_Edit</property>
@@ -168,20 +196,22 @@
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="menuItemUndo">
                         <property name="label" translatable="yes">Undo</property>
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="image">image5</property>
+                        <property name="tooltip-text" translatable="yes">Undo Last Change</property>
+                        <property name="image">image-undo</property>
                         <property name="use-stock">False</property>
                       </object>
                     </child>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="menuItemRedo">
                         <property name="label" translatable="yes">Redo</property>
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="image">image6</property>
+                        <property name="tooltip-text" translatable="yes">Redo Last Change</property>
+                        <property name="image">image-redo</property>
                         <property name="use-stock">False</property>
                       </object>
                     </child>
@@ -192,45 +222,50 @@
                       </object>
                     </child>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="menuItemCut">
                         <property name="label">gtk-cut</property>
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Cut</property>
                         <property name="use-underline">True</property>
                         <property name="use-stock">True</property>
                       </object>
                     </child>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="menuItemCopy">
                         <property name="label">gtk-copy</property>
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Copy</property>
                         <property name="use-underline">True</property>
                         <property name="use-stock">True</property>
                       </object>
                     </child>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="menuItemPaste">
                         <property name="label">gtk-paste</property>
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Paste</property>
                         <property name="use-underline">True</property>
                         <property name="use-stock">True</property>
                       </object>
                     </child>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="menuItemDelete">
                         <property name="label">gtk-delete</property>
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Delete Selection</property>
                         <property name="use-underline">True</property>
                         <property name="use-stock">True</property>
                       </object>
                     </child>
                     <child>
-                      <object class="GtkMenuItem">
+                      <object class="GtkMenuItem" id="menuItemDeleteLine">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Delete Current Line</property>
                         <property name="label" translatable="yes">Delete Line</property>
                         <property name="use-underline">True</property>
                       </object>
@@ -242,11 +277,12 @@
                       </object>
                     </child>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="menuItemSelectAll">
                         <property name="label" translatable="yes">Select All</property>
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="image">image7</property>
+                        <property name="tooltip-text" translatable="yes">Select All</property>
+                        <property name="image">image-select-all</property>
                         <property name="use-stock">False</property>
                       </object>
                     </child>
@@ -257,11 +293,12 @@
                       </object>
                     </child>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="menuItemPreferences">
                         <property name="label" translatable="yes">Preferences</property>
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="image">image8</property>
+                        <property name="tooltip-text" translatable="yes">Editor Preferences</property>
+                        <property name="image">image-properties</property>
                         <property name="use-stock">False</property>
                       </object>
                     </child>
@@ -270,39 +307,251 @@
               </object>
             </child>
             <child>
-              <object class="GtkMenuItem">
-                <property name="visible">True</property>
-                <property name="can-focus">False</property>
-                <property name="label" translatable="yes">_View</property>
-                <property name="use-underline">True</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkMenuItem">
+              <object class="GtkMenuItem" id="menuSearch">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="label" translatable="yes">_Search</property>
                 <property name="use-underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="menuItemSearch">
+                        <property name="label" translatable="yes">Search</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Search Text</property>
+                        <property name="image">image1</property>
+                        <property name="use-stock">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="menuItemSearchNext">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Search Next Occurence</property>
+                        <property name="label" translatable="yes">Search Next</property>
+                        <property name="use-underline">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="menuItemSearchPrevious">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Search Previous Occurence</property>
+                        <property name="label" translatable="yes">Search Previous</property>
+                        <property name="use-underline">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="menuItemSearchAndReplace">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Search and Replace</property>
+                        <property name="label" translatable="yes">Search and Replace</property>
+                        <property name="use-underline">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="menuItemGoto">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Go to</property>
+                        <property name="label" translatable="yes">Go to</property>
+                        <property name="use-underline">True</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
               </object>
             </child>
             <child>
-              <object class="GtkMenuItem">
+              <object class="GtkMenuItem" id="menuView">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="label" translatable="yes">_View</property>
                 <property name="use-underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="menuItemSelectFont">
+                        <property name="label" translatable="yes">Select Font</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Select Font</property>
+                        <property name="image">image2</property>
+                        <property name="use-stock">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="menuItemColorScheme">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Color Scheme</property>
+                        <property name="label" translatable="yes">Color Scheme</property>
+                        <property name="use-underline">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkCheckMenuItem" id="menuItemCheckLineNumber">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Line Number</property>
+                        <property name="label" translatable="yes">Line Number</property>
+                        <property name="use-underline">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkCheckMenuItem" id="menuItemCheckMenubar">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Menu Bar</property>
+                        <property name="label" translatable="yes">Menu Bar</property>
+                        <property name="use-underline">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkCheckMenuItem" id="menuItemCheckToolbar">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Tool Bar</property>
+                        <property name="label" translatable="yes">Tool Bar</property>
+                        <property name="use-underline">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkCheckMenuItem" id="menuItemCheckStatusBar">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Status Bar</property>
+                        <property name="label" translatable="yes">Status Bar</property>
+                        <property name="use-underline">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkCheckMenuItem" id="menuItemCheckFullScreen">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Full Screen</property>
+                        <property name="label" translatable="yes">Full Screen</property>
+                        <property name="use-underline">True</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
               </object>
             </child>
             <child>
-              <object class="GtkMenuItem">
+              <object class="GtkMenuItem" id="menuDocument">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="label" translatable="yes">_Document</property>
                 <property name="use-underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <child>
+                      <object class="GtkCheckMenuItem" id="menuItemCheckWordWrap">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Word Wrap</property>
+                        <property name="label" translatable="yes">Word Wrap</property>
+                        <property name="use-underline">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkCheckMenuItem" id="menuItemCheckAutoIndent">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Auto Indent</property>
+                        <property name="label" translatable="yes">Auto Indent</property>
+                        <property name="use-underline">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="menuItemTabSize">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Tab Size</property>
+                        <property name="label" translatable="yes">Tab Size</property>
+                        <property name="use-underline">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="menuItemFileType">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">File Type</property>
+                        <property name="label" translatable="yes">File Type</property>
+                        <property name="use-underline">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="menuItemLineEnding">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Line Ending</property>
+                        <property name="label" translatable="yes">Line Ending</property>
+                        <property name="use-underline">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkCheckMenuItem" id="menuItemCheckWriteUnicodeBom">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Write Unicode BOM</property>
+                        <property name="label" translatable="yes">Write Unicode BOM</property>
+                        <property name="use-underline">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="menuItemPreviousTab">
+                        <property name="label" translatable="yes">Previous Tab</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Previous Tab</property>
+                        <property name="image">image3</property>
+                        <property name="use-stock">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="menuItemNextTab">
+                        <property name="label" translatable="yes">Next Tab</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Next Tab</property>
+                        <property name="image">image4</property>
+                        <property name="use-stock">False</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
               </object>
             </child>
             <child>
-              <object class="GtkMenuItem">
+              <object class="GtkMenuItem" id="menuHelp">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="label" translatable="yes">_Help</property>
@@ -312,20 +561,22 @@
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="menuItemHelp">
                         <property name="label" translatable="yes">Help</property>
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="image">image1</property>
+                        <property name="tooltip-text" translatable="yes">Help Topics</property>
+                        <property name="image">image-help</property>
                         <property name="use-stock">False</property>
                       </object>
                     </child>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="menuItemAbout">
                         <property name="label" translatable="yes">About</property>
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="image">image2</property>
+                        <property name="tooltip-text" translatable="yes">About RustEd</property>
+                        <property name="image">image-about</property>
                         <property name="use-stock">False</property>
                       </object>
                     </child>
@@ -337,15 +588,15 @@
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
-            <property name="position">1</property>
+            <property name="position">0</property>
           </packing>
         </child>
         <child>
-          <object class="GtkToolbar">
+          <object class="GtkToolbar" id="toolbar1">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <child>
-              <object class="GtkToolButton">
+              <object class="GtkToolButton" id="toolButtonNew">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="label" translatable="yes">New</property>
@@ -358,7 +609,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolButton">
+              <object class="GtkToolButton" id="toolButtonOpen">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="label" translatable="yes">Open</property>
@@ -371,7 +622,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolButton">
+              <object class="GtkToolButton" id="toolButtonSave">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="label" translatable="yes">Save</property>
@@ -384,7 +635,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolButton">
+              <object class="GtkToolButton" id="toolButtonSaveAs">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="label" translatable="yes">Save As</property>
@@ -397,7 +648,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolButton">
+              <object class="GtkToolButton" id="toolButtonClose">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="label" translatable="yes">Close</property>
@@ -420,7 +671,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolButton">
+              <object class="GtkToolButton" id="toolButtonUndo">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="label" translatable="yes">Undo</property>
@@ -433,7 +684,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolButton">
+              <object class="GtkToolButton" id="toolButtonRedo">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="label" translatable="yes">Redo</property>
@@ -446,7 +697,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolButton">
+              <object class="GtkToolButton" id="toolButtonCut">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="label" translatable="yes">Cut</property>
@@ -459,7 +710,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolButton">
+              <object class="GtkToolButton" id="toolButtonCopy">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="label" translatable="yes">Copy</property>
@@ -472,7 +723,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolButton">
+              <object class="GtkToolButton" id="toolButtonPaste">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="label" translatable="yes">Paste</property>
@@ -495,7 +746,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolButton">
+              <object class="GtkToolButton" id="toolButtonSearch">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="label" translatable="yes">Search</property>
@@ -511,37 +762,30 @@
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
-            <property name="position">2</property>
+            <property name="position">1</property>
           </packing>
         </child>
         <child>
-          <object class="GtkBox">
+          <object class="GtkScrolledWindow" id="scrollWindow">
+            <property name="name">scroll_window</property>
             <property name="visible">True</property>
-            <property name="can-focus">False</property>
+            <property name="can-focus">True</property>
             <property name="hexpand">True</property>
             <property name="vexpand">True</property>
-            <property name="orientation">vertical</property>
+            <property name="shadow-type">in</property>
             <child>
-              <object class="GtkScrolledWindow">
+              <object class="GtkTextView" id="mainDocument">
+                <property name="name">main_document</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
-                <property name="shadow-type">in</property>
-                <child>
-                  <object class="GtkTextView">
-                    <property name="visible">True</property>
-                    <property name="can-focus">True</property>
-                    <property name="hexpand">True</property>
-                    <property name="vexpand">True</property>
-                  </object>
-                </child>
+                <property name="left-margin">2</property>
+                <property name="right-margin">2</property>
+                <property name="top-margin">2</property>
+                <property name="bottom-margin">2</property>
+                <property name="monospace">True</property>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
             </child>
           </object>
           <packing>
@@ -551,9 +795,10 @@
           </packing>
         </child>
         <child>
-          <object class="GtkStatusbar">
+          <object class="GtkStatusbar" id="statusBar">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
+            <property name="double-buffered">False</property>
             <property name="margin-left">10</property>
             <property name="margin-right">10</property>
             <property name="margin-start">10</property>
