@@ -5,4 +5,6 @@ version = "0.0.1"
 edition = "2021"
 
 [dependencies]
-gtk = "0.18.1"
+#gtk = "0.18.1"
+gtk = { git = "https://github.com/gtk-rs/gtk3-rs.git" }
+gdk = { git = "https://github.com/gtk-rs/gtk3-rs.git", package = "gdk" }
