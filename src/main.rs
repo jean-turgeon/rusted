@@ -1,13 +1,11 @@
-
-
+//
+//
 use gtk::prelude::*;
 use gtk::{ApplicationWindow, Builder};
 
 fn main() {
-    let application = gtk::Application::new(
-        Some("com.github.jean-turgeon.rusted"),
-        Default::default(),
-    );
+    let application =
+        gtk::Application::new(Some("com.github.jean-turgeon.rusted"), Default::default());
 
     application.connect_activate(build_ui);
 
@@ -22,4 +20,15 @@ fn build_ui(application: &gtk::Application) {
     window.set_application(Some(application));
 
     window.show_all();
+}
+
+#[cfg(test)]
+mod main_tests {
+    use super::*;
+
+    #[test]
+    fn it_works() {
+        let result = 2 + 2;
+        assert_eq!(result, 4);
+    }
 }
